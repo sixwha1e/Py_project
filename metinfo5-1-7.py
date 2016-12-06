@@ -1,3 +1,4 @@
+#metinfo_v5.1.7的sql盲注PoC
 
 #!/usr/bin/env python
 # coding:utf-8
