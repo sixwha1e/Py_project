@@ -1,3 +1,5 @@
+# bt天堂的种子下载器
+
 import requests, bs4, re, os
 from multiprocessing import Pool
 
