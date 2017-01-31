@@ -1,3 +1,18 @@
 # Py_project
 
-* 小小的python练习 such as PoC,spider...
+### 小小的python练习 包括一些自己写的小爬虫和小工具
+
+
+- exploit-db 2016年web漏洞统计 并导出excel
+
+- 爬取weibo单向关注
+
+- bt天堂种子下载（应该已经不好用了...
+
+- 豆瓣爱美丽专栏爬虫 并下载指定文章的图片
+
+- 陆续更新中... 
+
+
+
+
