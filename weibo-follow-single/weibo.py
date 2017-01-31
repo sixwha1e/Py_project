@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import requests
-import bs4
 import time
 import re
 
@@ -50,7 +49,10 @@ def get_last_page(URL):
     html = res.content
     rex = r'RelationMyfollow__93\\">(.*?)<\\/a>'
     page = re.findall(rex, html, re.DOTALL)
-    last_p = page[-2]
+    if page == []: # 关注列表 只有一页
+        last_p = 1
+    else:
+        last_p = page[-2]
     return int(last_p)
 
 if __name__ == '__main__':
