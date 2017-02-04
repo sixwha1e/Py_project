@@ -46,18 +46,22 @@ def removeproxy(proxy):
 
 '''
 def func(proxy):
+	proxy_temp = {'http': 'http://'+proxy, 'https': 'https://'+proxy}
     pass
 '''
-def func(proxy_temp):
+def func(proxy):
     '''测试函数 可自定义'''
+    proxy_temp = {'http': 'http://'+proxy, 'https': 'https://'+proxy}
     url = 'http://ip.chinaz.com/getip.aspx'
-    res = requests.get(url, proxies=proxy_temp, timeout=3).content
-    print res
+    try:
+    	res = requests.get(url, proxies=proxy_temp, timeout=3).content
+    	print res
+    except:
+    	removeproxy(proxy)
 
 
 def do(func):
-    proxy = randomchoose()
-    proxy_temp = {'http': 'http://'+proxy, 'https': 'https://'+proxy}
+    proxy = randomchoose() 
     try:
         func(proxy_temp)
     except Exception,e:
